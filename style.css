@@ -1,0 +1,745 @@
+  * {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+
+	
+}
+
+html {
+  scroll-behavior: smooth;
+  background-image: url("cover.jpg");  /*change cover banner */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+}
+.banner {
+	height: auto;
+	width: 100%;
+	
+
+	
+}
+
+.logo{
+  height: 60px;
+  width: 100px;
+  cursor: pointer;
+}
+.navbar {
+	width:  100%;
+	height: 60px	;
+	margin: auto;
+	padding: 20px 0;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1	));
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+	top: 0;
+	z-index: 11;
+	
+}
+
+h2{
+	cursor: pointer;
+	color: white;
+}
+
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+
+
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after {
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #f9d6a8;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+	width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+	.navbar {
+    padding: 20px 10px; /* Adjusted padding */
+    justify-content: center; /* Center contents on smaller screens */
+    position: relative; /* Ensure relative positioning for absolute logo positioning */
+  }
+
+  h2 {
+    margin-left: 0; /* Reset left margin for the logo */
+    position: absolute; /* Position logo absolutely */
+    left: 50%; /* Move logo to the horizontal center */
+    transform: translateX(-50%); /* Adjust to center */
+  }
+
+  .navbar ul {
+    display: none; /* Hide the list by default on smaller screens */
+    flex-direction: column; /* Stack list items vertically */
+    position: absolute;
+    top: 100%; /* Position it below the navbar */
+    left: 0;
+    background-color: #333; /* Background color for the hidden list */
+    width: 100%;
+    z-index: 10; /* Ensure it appears above other content */
+  }
+
+  .navbar ul.active {
+    display: flex; /* Show the list when it has the 'active' class */
+  }
+
+  .navbar .logo {
+  	position: center;
+  }
+}
+
+.home-text {
+    text-align: center;
+    padding: 100px; /* Adjust the padding as needed */
+    padding-top: 300px;
+    padding-bottom: 120px;
+    color: white;
+}
+
+.home-text h1{
+    font-size: 70px;
+}
+
+.home-text p{
+    font-size: 30px;
+    border: 2px solid;
+    width: 250px;
+    text-align: center;
+    margin-left: 40%;  /* Adjust amg sppace sa left ka EMC STudent nga box */
+}
+
+@media screen and (max-width: 768px) {
+    .home-text {
+        text-align: center;
+        padding: 20px; /* Adjust padding for smaller screens */
+        padding-top: 100px; /* Adjust top padding for smaller screens */
+    }
+
+    .home-text p {
+        width: auto; /* Allow paragraph width to adjust */
+        margin-left: auto; /* Center align paragraph */
+        margin-right: auto;
+    }
+}
+
+/* Styles for larger screens */
+#two {
+  overflow: hidden; /* Clearfix to contain floated elements */
+  background-color: saddlebrown;  /* change ang background color ka about page */
+  padding: 50px;
+  color: white;
+  padding-bottom: 0;
+  height: auto;
+  width: 100%;
+}
+
+.content-img {
+  float: right;
+  margin-right: 70px; /* Margin between image and text */
+  height: auto;
+}
+
+.about-me{
+  padding-right: 100px;
+  padding-left: 100px;
+}
+.About {
+  padding-top: 150px;
+	margin: 100px;
+  overflow: hidden; /* Clearfix to contain floated elements */
+}
+
+.About h1 {
+  text-align: left; /* Align text to the left */
+  font-size: 60px;
+}
+.About p {
+  text-align: left; /* Align text to the left */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  #two {
+  padding: 20px;
+
+ 
+}
+  .content-img {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 20px; /* Add space below the image for smaller screens */
+    height: inherit;
+  }
+
+  .about-me{
+    width: 100%;
+  }
+
+  .About {
+    width: 100%; /* Make text take full width on smaller screens */
+    margin: 0px;
+    padding-bottom: 30px;
+
+  }
+
+  .About h1, p{
+    text-align: center;
+    margin: 0;
+    padding: 0; /* Make text take full width on smaller screens */
+  }
+  .About  p{
+    text-align: justify;
+    margin: 0;
+    padding: 0; /* Make text take full width on smaller screens */
+  }
+}
+
+#three{
+background-color: #f9d6a8 ; /* change ang background color ka about page */
+color: white;
+height: 100%;
+padding-top: 5%;
+padding-bottom: 5%;
+}
+
+#three h1{
+text-align: center;
+font-size: 70px;
+padding: 50px;
+color: saddlebrown;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: saddlebrown;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 45%;
+ }
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #fbdfaa;
+  border: 4px solid  saddlebrown;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid saddlebrown; /* change ang background color  */
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: saddlebrown; /* change ang background color  */
+  position: relative;
+  border-radius: 6px;
+  height: auto;
+}
+.content h2 {
+ font-size: 20px;
+}
+.content p{
+ font-size: 15px;
+ text-align: center;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0; / * Reset margin for full width */
+  }
+  .content {
+   padding: 28px;
+   height: auto;
+  }
+  .content h2 {
+   font-size: 12px;
+
+  }
+  .content p{
+   font-size: 10px;
+   text-align: center;
+   margin-top: 28Px;
+  }
+}
+
+
+
+
+#four{
+background-color: saddlebrown;
+color: white;
+height: 100%;
+padding: 10px;
+padding-bottom: 5%;
+}
+
+
+h2{
+  font-size: 50px;
+  text-align: center;
+  margin: ;
+}
+
+.row > .column {
+  padding:  8px;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  border-radius: 20px;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5 ));
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: saddlebrown;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #fbdfaa;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* General styles */
+
+/* Your existing styles... */
+
+/* Responsive styles */
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
+
+  /* Modify the column width to occupy full width on smaller screens */
+  .column {
+    width: 100%;
+  }
+
+  /* Adjust padding or other styles as needed for smaller screens */
+  #four {
+    padding: 10%;
+    padding-bottom: 2.5%;
+  }
+   .row{
+    padding-top: 20%;
+  }
+
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Adjustments for medium-sized screens */
+
+  /* Modify the column width or any other styles */
+  .column {
+    width: 50%;
+  }
+
+  /* Adjust padding or other styles as needed for medium screens */
+  #four {
+    padding: 8%;
+    padding-bottom: 4%;
+  }
+  .row{
+    padding-top: 20%;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+}
+
+/* Larger screens */
+@media only screen and (min-width: 1025px) {
+  /* Adjustments for larger screens */
+
+  /* Reset column width or any other styles */
+  .column {
+    width: 33.33%;
+  }
+
+  /* Reset padding or other styles for larger screens */
+  #four {
+    padding: 10%;
+    padding-bottom: 5%;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 70px;
+  }
+}
+
+/* Rest of your CSS... */
+
+
+
+
+
+#contact {
+  background-color: saddlebrown;
+  padding-top: 15px ;
+  padding-bottom: 10px;
+  color: white;
+}
+
+
+.container2 {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 35px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.aa{
+  height: 160px;
+  width: 220px;
+  border: 2px solid #2f5755;
+  border-radius: 2px;
+
+}
+
+.bb{
+  width: 160px;
+  height: 220px;
+  border: 2px solid #2f5755;
+  border-radius: 2px;
+}
+
+img .prof{
+  width: 20%;
+  height: auto;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  
+  .bb,
+  .aa {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    padding: 5px;
+  }
+  
+  .bb,
+  .aa {
+    max-width: 100%;
+  }
+}
+
+#contact{
+  padding: 50px;
+}
+
+.contact-panel {
+  
+  padding: 2px;
+  text-align: center;
+}
+
+.social-media-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-links li {
+  margin: 0 10px;
+}
+
+
+.social-media-links, .sns a:hover {
+  color: sandybrown;
+}
+
+.sns{
+  height: 35px;
+
+  
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .contact-panel { 
+    padding: 10px;
+    text-align: center;
+
+  }
+  .contact-panel h2 { 
+    font-size: 25px;
+  }
+
+  .contact-panel p { 
+    font-size: 15px;
+    margin: 20px;
+    margin-bottom: 0;
+    margin-top: 35px  ;
+  }
+
+  .social-media-links {
+    flex-direction: row; /* Stack the social media links vertically */
+    align-items: center; /* Center align the social media links */
+  }
+
+  .social-media-links li {
+    margin: 5px 0; /* Add margin between stacked social media links */
+    padding: 5px;
+  }
+}
+
+#footer{
+background-color: saddlebrown;
+border-top: 5px solid  sandybrown;
+color: white;
+padding: 30px;
+text-align: center;
+}
+
+
